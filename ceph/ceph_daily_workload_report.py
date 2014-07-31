@@ -30,6 +30,13 @@ def check_pool(dict1):
 	dict1["ceph pool status"]=output
 	return dict1
 
+def run_command(dict1,key,command):
+	print "<!--Checking "+key+"-->"
+     	ret,output = commands.getstatusoutput(cmd)
+     	output=output.replace('\n','<br>')
+	dict1[key]=output
+	return dict1
+
 def get_html_body(dict1):
 	date=time.strftime("%Y/%m/%d %H:%M:%S")
 	hostname=socket.gethostname()
