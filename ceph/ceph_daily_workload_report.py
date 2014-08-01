@@ -124,11 +124,12 @@ def output_report(dict1):
 	sender = 'ceph-user@'+hostname
 	#receiver = 'andrew_yu@zeuscloud.cn;sean_cao@zeuscloud.cn'
 	#receiver = 'sean_cao@zeuscloud.cn;;andrew_yu@zeuscloud.cn'
-	receiver = ['sean_cao@zeuscloud.cn','andrew_yu@zeuscloud.cn','netlink_xiao@zeuscloud.cn']
+	#receiver = ['sean_cao@zeuscloud.cn','andrew_yu@zeuscloud.cn','netlink_xiao@zeuscloud.cn']
+	receiver = ['andrew_yu@zeuscloud.cn']
 	subject = 'Ceph DWR '+date
 	smtpserver = 'localhost'  
-	username = 'root'  
-	password = 'welcome1'  
+	#username = 'root'  
+	#password = 'welcome1'  
 
 	#pattern = re.compile(r'health HEALTH_(\w+) ')
 	#pattern = re.compile(r'health&nbsp;HEALTH_(\w+)&nbsp;')
