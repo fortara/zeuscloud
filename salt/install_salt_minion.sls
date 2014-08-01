@@ -12,15 +12,14 @@ salt_conf:
   file.managed:
   - name: /etc/salt/minion
   - source: salt://minions/files/minion
-  - template: jinja
-  - defaults:
-    minion_id: {{grains['host']}}
   - require:
     - pkg: salt_pkg
 salt_service:
   service.running:
+  - reload: True
+  - enable: True  
   - name: salt-minion
   - require:
-    - file: salt_conf
+    - pkg: salt_pkg
   - watch:
     - file: salt_conf
